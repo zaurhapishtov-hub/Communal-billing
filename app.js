@@ -12,6 +12,26 @@ const DATA = {
 };
 
 // --- РђРІС‚Рѕ-owner РёР· РґРѕРјРµРЅР° Рё РїР°СЂР°РјРµС‚СЂС‹ URL ---
+
+// --- Robust decoder: UTF-8 with fallback to Windows-1251 ---
+function decodeBytes(bytes) {
+  try {
+    const s = new TextDecoder('utf-8', {fatal: false}).decode(bytes);
+    // If string contains many replacement chars, try cp1251
+    const bad = (s.match(/\uFFFD/g) || []).length;
+    if (bad > 0) {
+      try { return new TextDecoder('windows-1251').decode(bytes); } catch {}
+    }
+    return s;
+  } catch (e) {
+    try { return new TextDecoder('windows-1251').decode(bytes); } catch {}
+    // Fallback: naive charCode mapping
+    let out = '';
+    for (let i=0;i<bytes.length;i++) out += String.fromCharCode(bytes[i]);
+    return out;
+  }
+}
+
 function getOwnerFromHost() {
   const h = location.hostname;
   if (h.endsWith('github.io')) return h.split('.')[0];
@@ -165,7 +185,7 @@ async function readCSV(filename) {
     for (let i = 0; i < binaryString.length; i++) {
       bytes[i] = binaryString.charCodeAt(i);
     }
-    const csv = new TextDecoder('utf-8').decode(bytes);
+    const csv = decodeBytes(bytes);
     
     return parseCSV(csv);
   } catch (error) {
