@@ -71,8 +71,8 @@ id,apartment_id,period,enabled
 70,6,2025-07,false
 71,6,2025-08,false
 72,6,2025-09,false
-73,6,2025-10,false
-74,6,2025-11,false
+73,6,2025-10,true
+74,6,2025-11,true
 75,6,2025-12,false
 76,8,2025-01,false
 77,8,2025-02,false
