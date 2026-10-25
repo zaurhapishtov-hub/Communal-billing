@@ -167,7 +167,7 @@ id,apartment_id,period,enabled
 166,4,2026-07,false
 167,4,2026-08,false
 168,4,2026-09,false
-169,4,2026-10,false
+169,4,2026-10,true
 170,4,2026-11,false
 171,4,2026-12,false
 172,7,2026-01,true
