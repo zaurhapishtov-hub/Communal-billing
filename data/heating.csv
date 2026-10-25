@@ -155,7 +155,7 @@ id,apartment_id,period,enabled
 154,3,2026-07,false
 155,3,2026-08,false
 156,3,2026-09,false
-157,3,2026-10,false
+157,3,2026-10,true
 158,3,2026-11,false
 159,3,2026-12,false
 160,4,2026-01,true
