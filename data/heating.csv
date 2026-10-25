@@ -203,7 +203,7 @@ id,apartment_id,period,enabled
 202,6,2026-07,false
 203,6,2026-08,false
 204,6,2026-09,false
-205,6,2026-10,false
+205,6,2026-10,true
 206,6,2026-11,false
 207,6,2026-12,false
 208,8,2026-01,false
