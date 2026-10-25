@@ -215,6 +215,6 @@ id,apartment_id,period,enabled
 214,8,2026-07,false
 215,8,2026-08,false
 216,8,2026-09,false
-217,8,2026-10,false
+217,8,2026-10,true
 218,8,2026-11,false
 219,8,2026-12,false
