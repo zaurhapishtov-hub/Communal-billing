@@ -2,8 +2,8 @@ id,service_id,price,apartment_type
 1,1,17.84,all
 2,2,17.84,all
 3,3,55.07,all
-4,4,320,all
-5,5,36.35,all
+4,4,400,all
+5,5,42.27,all
 6,6,1800,studio
 7,6,1550,duplex
 8,7,2000,all
